@@ -90,11 +90,14 @@ function stop() {
 }
 
 // Function to reset the stopwatch or timer
+// Function to reset the stopwatch or timer
 function reset() {
     clearIntervals(); // Clear any existing intervals
 
     if (currentMode === 'stopwatch') {
         stopwatchTime = 0;
+        lapCounter = 0; // Reset lap counter
+        lapList.innerHTML = ''; // Clear lap list
         updateTimeDisplay();
     } else if (currentMode === 'timer') {
         timerTime = 0;
