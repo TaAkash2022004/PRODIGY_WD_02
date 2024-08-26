@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch and Timer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Digital-7:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Digital Clock with Stopwatch and Timer</h1>
+
+        <div id="mode-switch">
+            <button class="btn" id="stopwatch-mode">Stopwatch</button>
+            <button class="btn" id="timer-mode">Timer</button>
+        </div>
+
+        <div id="time" class="time-display">
+            <span class="digit" id="hr">00</span>
+            <span class="divider">:</span>
+            <span class="digit" id="min">00</span>
+            <span class="divider">:</span>
+            <span class="digit" id="sec">00</span>
+            <span class="divider">:</span>
+            <span class="digit" id="count">00</span>
+        </div>
+
+        <div id="buttons">
+            <button class="btn" id="start">Start</button>
+            <button class="btn" id="stop">Stop</button>
+            <button class="btn" id="reset">Reset</button>
+            <button class="btn" id="lap">Lap</button>
+        </div>
+        <script>
+            // Load the tick sound
+            const tickSound = new Audio('path-to-your-sound-file/tick.mp3'); // Update this path to the correct location of your sound file
+        
+            function playTickSound() {
+                tickSound.play();
+            }
+        
+            // Set the interval to play the sound every second (1000 milliseconds)
+            setInterval(playTickSound, 1000);
+        </script>
+        
+
+        <div id="laps">
+            <h2>Laps</h2>
+            <ul id="lap-list"></ul>
+        </div>
+
+        <div id="timer-settings" class="timer-settings" style="display: none;">
+          
+            <label for="timer-min">Minutes:</label>
+            <input type="number" id="timer-min" min="0" value="0">
+            <label for="timer-sec">Seconds:</label>
+            <input type="number" id="timer-sec" min="0" value="0">
+            
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

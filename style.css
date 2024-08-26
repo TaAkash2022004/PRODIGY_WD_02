@@ -1,0 +1,157 @@
+body {
+    font-family: 'Digital 7 Mono', sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative; /* Make sure the ::before pseudo-element is positioned correctly */
+    color: #ffffff;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('DALL·E 2024-08-26 20.57.32 - A modern, abstract background image that complements a digital clock interface with a dark theme. The image should feature subtle gradients, soft ligh.webp') no-repeat center center fixed;
+    background-size: cover;
+    filter: blur(8px); /* Adjust the blur amount here */
+    z-index: -1; /* Place behind the content */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative; /* Ensure it stays above the blurred background */
+    z-index: 1; /* Ensure content is above the background */
+}
+
+/* Other existing CSS code remains the same */
+
+h1 {
+    font-size: 2em;
+    color: #61dafb;
+    margin-bottom: 20px;
+}
+
+#mode-switch {
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #61dafb;
+    border: none;
+    border-radius: 5px;
+    color: #282c34;
+    cursor: pointer;
+    font-size: 1em;
+    padding: 10px 20px;
+    margin: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #4fa3b7;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.time-display {
+    font-size: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.digit {
+    font-family: 'Digital 7 Mono', sans-serif; /* Apply the digital font */
+    font-size: 3em;
+    color: rgba(97, 218, 251, 0.7); /* Use rgba for transparency effect */
+    margin: 0 5px;
+}
+
+.divider {
+    font-size: 3em;
+    color: rgba(255, 255, 255, 0.7); /* Transparent white color */
+}
+
+#buttons {
+    margin-top: 20px;
+}
+
+#laps {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+#lap-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #ffffff;
+    font-size: 1.2em;
+}
+
+#lap-list li {
+    margin: 5px 0;
+}
+
+.timer-settings {
+    margin-top: 20px;
+    text-align: center;
+    background-color: #1c1e22;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.timer-settings h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #61dafb;
+}
+
+.timer-inputs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.timer-input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.timer-input-group input {
+    width: 60px;
+    text-align: center;
+    font-size: 1.2em;
+    padding: 5px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #282c34;
+    color: #61dafb;
+}
+
+.timer-input-group label {
+    margin-top: 5px;
+    color: #ffffff;
+    font-size: 0.9em;
+}
+
+.timer-input-group input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(97, 218, 251, 0.5);
+}
